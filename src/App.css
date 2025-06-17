@@ -13,11 +13,17 @@
   }
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .App-text {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -35,4 +41,20 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.hover-enlarge {
+  transition: transform 0.2s;
+  position: relative;
+}
+
+.hover-enlarge:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+/* Chess piece styling */
+.hover-enlarge {
+  user-select: none;
+  border: 1px solid #333;
 }
